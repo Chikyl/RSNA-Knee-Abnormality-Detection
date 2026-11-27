@@ -97,27 +97,6 @@ Gold macro-AUC by epoch for that run:
 
 Weight averaging and an epoch-ensemble over the top 3 epochs lifted it to about 0.885–0.886.
 
----
-
-## Repository layout
-
-> ⚠️ Adjust to match the actual folder structure.
-
-```
-.
-├── assets/
-│   └── solution_overview.jpg       # Solution diagram
-├── convnext.ipynb                  # Early baseline: attention-MIL training
-├── convnext-inference.ipynb        # Early baseline: DICOM -> 12 probabilities
-├── rsna-knee-version2.ipynb        # Final submission notebook (full blend)
-└── README.md
-```
-
-| File | Purpose |
-|---|---|
-| `rsna-knee-version2.ipynb` | Final scoring notebook: public Raptor 384 and 224 models, our RAPTOR r4pool and ConvNeXt-tiny e2e models, and the final per-finding rank blend |
-| `convnext.ipynb` | Dataset, model, training loop, gold validation, top-K / SWA checkpointing |
-| `convnext-inference.ipynb` | Loads a `knee_ft_<tag>.pt` checkpoint, rebuilds test volumes from DICOM, writes `submission.csv` |
 
 ---
 
